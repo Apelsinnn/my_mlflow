@@ -106,6 +106,8 @@ services:
           --host "${MLFLOW_HOST}" \
           --port "${MLFLOW_PORT}" \
           --app-name basic-auth
+          --workers 1
+          # выше можно убрать если сервер позволяет
 
     ports:
       - "${MLFLOW_PORT}:${MLFLOW_PORT}"
